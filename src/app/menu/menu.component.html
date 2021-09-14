@@ -1,0 +1,66 @@
+<header>
+    <div class="header">
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-3 logo_section">
+                    <div class="full">
+                        <div class="center-desk">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/images/logo.jpg" alt="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="right_header_info">
+                        <ul *ngIf="islogin==false">
+               <li>
+                 <a routerLink="/"><b>Home</b></a>
+               </li>
+               <li>
+                 <a routerLink="/userlogin"><b>User</b></a>
+               </li>
+               <li>
+                 <a routerLink="/adminlogin"><b>Admin</b></a>
+               </li>
+                        </ul>
+
+                        <ul *ngIf="islogin==true && usertype=='admin'">
+                            <li>
+                              <a routerLink="/adminhome"><b>Home</b></a>
+                            </li>
+                            <li>
+                              <a routerLink="/admincate"><b>Category</b></a>
+                            </li>
+                            <li>
+                              <a routerLink="/adminprod"><b>Product</b></a>
+                            </li>
+                            <li>
+                            <b id="logout" (click) = "logout()">Logout</b>
+                              </li>
+                        </ul>
+
+
+                                     <ul *ngIf="islogin==true && usertype=='user'">
+                                      <li>
+                                        <a routerLink="/userhome"><b>Home</b></a>
+                                      </li>
+                                      <li>
+                                        <a routerLink="/usercart"><b>Cart</b></a>
+                                      </li>
+                                      <li>
+                                        <a routerLink="/userprofile"><b>Profile</b></a>
+                                      </li>
+                                      <li>
+                                      <b id="logout" (click) = "logout()">Logout</b>
+                                        </li>
+                                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end header -->

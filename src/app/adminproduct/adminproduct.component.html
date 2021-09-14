@@ -1,0 +1,72 @@
+<section class="slider_section">
+    <div class="banner_main">
+        <div class="container-fluid">
+            <div class="contact">
+                <div class="container-fluid padddd">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="title">
+                                <br>
+                                <h2>TechMall <strong class="black">Products</strong></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form #frm="ngForm" (submit)="save(frm.value)">
+                    <div class="row">
+                        <div class='col-lg-4 col-md-4'>
+                             <select class='form-control' name="cate" ngModel>
+                                 <option>Choose Category</option>
+                                 <option *ngFor="let ob of catelist" value="{{ob['_id']}}">
+                                     {{ob['title']}}
+                                 </option>
+                             </select>   
+                        </div>
+
+                       <div class='col-lg-4 col-md-4'>
+                            <input type="text" name="title" ngModel
+                            class='form-control' placeholder="Product Title">
+                       </div>
+
+                       <div class='col-lg-4 col-md-4'>
+                        <input type="text" name="price" ngModel
+                        class='form-control' placeholder="Product Price">
+                       </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-lg-4 col-md-4'>
+                            <button type='submit' class='btn btn-info'>Save Product</button>
+                            &nbsp;
+                            <b class='text-danger'>{{msg}}</b>
+                        </div>
+                    </div>
+                    </form>
+                    <hr>
+
+                    <table class='table'>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Image</th>
+                            <th>Product Title</th>
+                            <th>Upload Image</th>
+                        </tr>
+
+                        <tr *ngFor="let p of plist;let i=index;">
+                            <th>{{i+1}}</th>
+                            <th>
+                              <img src="assets/product/noimg.png" height="120" width="140">
+                            </th>
+                            <th>{{p['title']}}</th>
+                            <th>
+                            <input type="file" (change)="handleChangePic($event)" 
+                            class='form-control'>
+                            <br>
+                            <button class='btn btn-primary' (click)="upload(p['_id'])">Upload</button>                                
+                            </th>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>    

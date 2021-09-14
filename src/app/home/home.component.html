@@ -1,0 +1,113 @@
+           
+            
+            <!-- end header -->
+            <section class="slider_section">
+                <div class="banner_main">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
+                                <div class="text-bg">
+                                    <h1>The latest <br> <strong class="black_bold">Electronic Accessories</strong><br></h1>
+                                    <a href="#">Shop Now <i class='fa fa-angle-right'></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="text-img">
+                                    <figure><img src="assets/images/bg.jpg" /></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="title">
+                        <br>
+                        <h2>TechMall <strong class="black">Products</strong></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-lg-3 offset-md-1">
+                    <h1>Category</h1>
+                    <ul>
+                    <li *ngFor="let c of catelist">
+                    <b (click)="search(c)" 
+                     class='clink'>
+                         {{c['title']}} </b> </li>   
+                    </ul>
+                </div>
+
+                <div class="col-md-8 col-lg-8">     
+                             <div class="row">
+                        <div *ngFor="let p of plist" class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <div class="full product">
+                              <div class="product_img">
+                                <div class="center"> <img src="assets/product/{{p.pic}}" alt="#"/>
+                                  <div class="overlay_hover">
+                                    <b (click)="add(p._id)" class='btn btn-info'>
+                                        Add to cart</b> </div>
+                                </div>
+                              </div>
+                              <div class="product_detail text_align_center">
+                                <p class="product_price">Rs. {{p['price']}}</p>
+                                <p class="product_descr">{{p['title']}}</p>
+                              </div>
+                            </div>
+                          </div>                                      </div>                       
+                </div>
+            </div>
+
+
+
+            <div class="contact">
+                <div class="container-fluid padddd">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="title">
+                                <h2>Contact <strong class="black">Us</strong></h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
+                             <div class="map_section">
+                     <div id="map">
+                     </div>
+                   </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
+                            <form class="main_form">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Name" type="text" name="Name">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Email" type="text" name="Email">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <button class="send">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end map -->
+            <!--  footer -->
+            <footer>                 
+                    <div class="copyright">
+                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+                    </div>
+            </footer>

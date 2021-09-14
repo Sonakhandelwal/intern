@@ -1,0 +1,49 @@
+<section class="slider_section">
+    <div class="banner_main">
+        <div class="container-fluid">
+            <div class="contact">
+                <div class="container-fluid padddd">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="title">
+                                <br>
+                                <h2> Admin <strong class="black">Category </strong></h2>
+            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class='col-lg-1 col-md-1 col-sm-1'></div>
+                        <div class='col-lg-6 col-md-6 col-sm-6'>
+                            <input type="text" #title class="form-control"
+                            placeholder="Category Title">
+                        </div>
+                        <div class='col-lg-4 col-md-4 col-sm-4'>
+                            <button class='btn btn-info' (click)="save(title.value)"> Save Category</button>
+                            &nbsp;
+                            <b class='text-danger'>{{msg}}</b>
+                        </div>
+                        <div class='col-lg-1 col-md-1 col-sm-1'></div>
+                    </div>
+                    <hr>
+                    <table class='table'>
+                           <tr>
+                               <th>S. No.</th>
+                               <th>Category Title</th>
+                               <th>Operation</th>
+                           </tr> 
+
+                         <tr *ngFor="let ob of catelist;let i=index">
+                           <th>{{i+1}}</th> 
+                           <th>{{ob['title']}}</th>  
+                           <th></th>
+
+                         </tr>
+                           
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>

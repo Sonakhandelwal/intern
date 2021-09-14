@@ -1,0 +1,15 @@
+li a{
+    color: black;
+     
+}
+li a:hover{
+    color: teal;
+    font-size: x-large;
+    font-weight: 500;
+}
+li b:hover{
+    cursor: pointer;
+    color: teal;
+    font-size: x-large;
+    font-weight: 500;
+}
